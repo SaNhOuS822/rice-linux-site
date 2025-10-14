@@ -4,13 +4,19 @@ import '../../styles/LoadingScreen/LoadingScreen.scss'
 import { useEffect } from 'react'
 
 
-export const SHOWING_DELAY = 1.5
+export const SHOWING_DELAY = 0
 export const SHOWING_DURATION = 0.5
 export const HIDING_DELAY = SHOWING_DELAY + SHOWING_DURATION + 0.2
 export const HIDING_DURATION = SHOWING_DURATION
 
 
-export default function LoadingScreen() {
+export default function LoadingScreen({ loaded }) {
+  useEffect(() => {
+    if (loaded) {
+
+    }
+  }, [loaded]);
+
   return (
     <>
       <div className="loadingScreen">
@@ -89,7 +95,6 @@ export default function LoadingScreen() {
                 y: '-100%',
               }}
               animate={{
-                // y: '-10%',
                 y: 0,
               }}
               transition={{

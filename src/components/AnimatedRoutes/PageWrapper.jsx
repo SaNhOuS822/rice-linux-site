@@ -15,7 +15,7 @@ const texsts = {
 }
 
 
-export default function PageWrapper({ path, pressedRoute, children }) {
+export default function PageWrapper({ path, pressedRoute, loaded, children }) {
   const [transition, setTransition] = useState(true);
   const [delay, setDelay] = useState(false);
   const [renderExitScreen, setRenderExitScreen] = useState(false);
@@ -29,7 +29,7 @@ export default function PageWrapper({ path, pressedRoute, children }) {
   useEffect(() => {
     setTimeout(() => {
       setDelay(true);
-    }, ((path != '/') ? (TRANSITION_SHOWING_DELAY - 0.8) : (LOADING_SHOWING_DELAY - 0.8)) * 1000);
+    }, ((path != '/') ? (0) : (0)));
   }, []);
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export default function PageWrapper({ path, pressedRoute, children }) {
     <motion.div>
       { transition && ((path != '/')
         ? <TransitionScreen topText={texsts[path][0]} bottomText={texsts[path][1]} />
-        : <LoadingScreen />
+        : <LoadingScreen loaded={loaded} />
       )}
       { delay && <>
         {

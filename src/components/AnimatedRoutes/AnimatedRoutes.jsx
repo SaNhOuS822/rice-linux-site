@@ -7,10 +7,12 @@ import DocumentationPage from '../DocumentationPage/DocumentationPage.jsx';
 import UtilsPage from '../UtilsPage/UtilsPage.jsx';
 
 import PageWrapper from './PageWrapper.jsx';
+import { useState } from "react";
 
 
 export default function AnimatedRoutes({ pressedRoute }) {
   const location = useLocation();
+  const [loaded, setLoaded] = useState(false);
 
   return (
     <AnimatePresence mode='wait'>
@@ -18,8 +20,8 @@ export default function AnimatedRoutes({ pressedRoute }) {
         <Route
           path='/'
           element={
-            <PageWrapper path='/' pressedRoute={pressedRoute}>
-              <Mainscreen />
+            <PageWrapper path='/' pressedRoute={pressedRoute} loaded={loaded}>
+              <Mainscreen setLoaded={setLoaded} />
             </PageWrapper>
           }
         />
