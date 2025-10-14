@@ -1,0 +1,159 @@
+.util {
+  &__info {
+    &__wrapper {
+      position: absolute;
+
+      top: 13vh;
+      left: 9vw;
+    }
+
+    position: relative;
+
+    width: 350px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    &__title {
+      &__wrapper {
+        position: relative;
+
+        overflow: hidden;
+      }
+
+      position: absolute;
+
+      display: inline-block;
+
+      color: white;
+      font-weight: 700;
+      font-size: 80px;
+      line-height: 1;
+    }
+
+    &__github {
+      &__wrapper {
+        position: relative;
+        overflow: hidden;
+
+        margin-bottom: 20px;
+      }
+
+      position: absolute;
+
+      display: inline-block;
+
+      color: white;
+      font-weight: 700;
+      font-size: 35px;
+      line-height: 1;
+    }
+
+    &__stars {
+      &__wrapper {
+        position: relative;
+        overflow: hidden;
+
+        margin-bottom: 5px;
+      }
+
+      position: absolute;
+
+      display: inline-block;
+
+      color: white;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 1;
+    }
+
+    &__forks {
+      &__wrapper {
+        position: relative;
+        overflow: hidden;
+
+        margin-bottom: 5px;
+      }
+
+      position: absolute;
+
+      display: inline-block;
+
+      color: white;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 1;
+    }
+
+    &__watching {
+      &__wrapper {
+        position: relative;
+        overflow: hidden;
+
+        margin-bottom: 5px;
+      }
+
+      position: absolute;
+
+      display: inline-block;
+
+      color: white;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 1;
+    }
+  }
+
+  &__desc {
+    &__wrapper {
+      position: absolute;
+      overflow: hidden;
+
+      top: 13vh;
+      right: 9vw;
+
+      width: 450px;
+    }
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    &__title {
+      &__wrapper {
+        position: relative;
+        overflow: hidden;
+
+        height: 73px;
+
+        margin-bottom: 15px;
+      }
+
+      position: absolute;
+
+      color: white;
+      font-weight: 700;
+      font-size: 70px; // 35px
+      line-height: 1;
+    }
+
+    &__content {
+      &__wrapper {
+        position: relative;
+        overflow: hidden;
+
+        height: 40px;
+      }
+
+      position: absolute;
+
+      color: white;
+      font-weight: 700;
+      font-size: 35px;
+      line-height: 1;
+    }
+  }
+}
+

@@ -1,0 +1,29 @@
+.header__links {
+  &-list {
+    display: flex;
+    flex-direction: horizontal;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 100%;
+    width: 100%;
+  }
+
+  &-logo {
+    min-height: 25px;
+    max-height: 25px;
+    min-width: 25px;
+    max-width: 25px;
+  }
+
+  &-link {
+    display: inline-block;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 5px;
+
+    border-radius: 50%;
+  }
+}

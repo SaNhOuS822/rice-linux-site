@@ -1,0 +1,15 @@
+.downloadPage {
+  &__wrapper {
+    height: 400vh;
+  }
+
+  position: fixed;
+  overflow: hidden;
+
+  height: 400vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+}
+

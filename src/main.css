@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+
+
+@font-face {
+  font-family: "Anurati Pro Outline";
+  src: url("../public/fonts/AnuratiProOutline.ttf") format("truetype"); /* Path to your TTF file */
+}
+
+
+@font-face {
+  font-family: "Anurati Pro Filled";
+  src: url("../public/fonts/AnuratiProFilled.ttf") format("truetype"); /* Path to your TTF file */
+}
+
+
+* {
+  color: inherit;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 18px;
+  z-index: inherit;
+  fill: inherit;
+}
+
+html,
+body,
+:root {
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  background-color: '#222436';
+
+  font-family: "Quicksand", serif;
+}
+
+
+.sgs {
+  border: 1px solid red;
+}
+

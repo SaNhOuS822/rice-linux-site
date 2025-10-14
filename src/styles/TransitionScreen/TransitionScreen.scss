@@ -1,0 +1,93 @@
+.transitionScreen {
+  position: absolute;
+
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  z-index: 150;
+
+  &__half {
+    flex: 1;
+
+    overflow: hidden;
+
+    width: 100vw;
+
+    background-color: #141628;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    max-height: 50vh;
+
+    border: 5px solid white;
+
+    &-container {
+      overflow: hidden;
+
+      height: 300px;
+      width: 100%;
+
+      text-align: center;
+    }
+
+    &-text {
+      display: inline-block;
+
+      text-align: center;
+
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+
+      &-char {
+        display: inline-block;
+
+        text-transform: uppercase;
+        font-size: 300px;
+        color: white;
+
+        &-top {
+          font-family: 'Anurati Pro Outline';
+        }
+
+        &-bottom {
+          font-family: 'Anurati Pro Filled';
+        }
+      }
+    }
+  }
+
+  &__top {
+    justify-content: flex-end;
+    border-bottom: none;
+  }
+
+  &__bottom {
+    justify-content: flex-start;
+    border-top: none;
+  }
+
+  &__underline {
+    background-color: white;
+    height: 5px;
+
+    z-index: 200;
+
+    &-top {
+      border-radius: 5px 5px 0px 0px;
+    }
+
+    &-bottom {
+      border-radius: 0px 0px 5px 5px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.header__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background: linear-gradient(90deg, #5CD076, #DECF6E);
+  // background-clip: text;
+
+  &-text {
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+    // color: transparent;
+  }
+}

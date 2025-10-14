@@ -1,0 +1,13 @@
+.revealingText {
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &__char {
+    color: white;
+    font-weight: 700;
+    line-height: 1;
+  }
+}

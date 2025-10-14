@@ -1,0 +1,123 @@
+$lgradient: linear-gradient(to right, #1F9BF3, #C259E7, #C259E7, #1F9BF3, #1F9BF3, #C259E7);
+
+$lg_size: 500% 100%;
+$lg_anim_duration: 3s;
+
+
+.header__menu {
+  &-list {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: horizontal;
+    align-items: center;
+    justify-content: center;
+
+    & li:not(:last-child) {
+      margin-right: 25px;
+      padding-right: 25px;
+      border-right: 2px solid white;
+    }
+  }
+
+  &-link {
+    &-wrapper {
+      position: relative;
+    }
+
+    &-text {
+      &-showing {
+        background-image: $lgradient;
+        background-size: $lg_size;
+
+        animation: gradientAnimation $lg_anim_duration linear infinite;
+
+        background-clip: text;
+
+        color: transparent;
+      }
+    }
+
+    &-underline {
+      position: absolute;
+
+      bottom: -7px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      height: 3px;
+
+      background-color: white;
+
+      border-radius: 3px;
+
+      background-image: $lgradient;
+      background-size: $lg_size;
+
+      animation: gradientAnimation $lg_anim_duration linear infinite;
+    }
+
+    &-triangle {
+      position: absolute;
+
+      bottom: -7px;
+      left: 50%;
+
+      transform: translateX(-50%);
+
+      width: 0;
+      height: 0;
+
+      border-left:   6px solid transparent;
+      border-right:  6px solid transparent;
+      border-bottom: 8px solid #717aed;
+
+      animation: triangleAnimation $lg_anim_duration linear infinite;
+    }
+
+    position: relative;
+    flex: 1;
+
+    display: inline-block;
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+
+    cursor: pointer;
+  }
+}
+
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+@keyframes triangleAnimation {
+  0% {
+    border-bottom-color: #717aed;
+  }
+  25% {
+    border-bottom-color: #C259E7;
+  }
+  50% {
+    border-bottom-color: #717aed;
+  }
+  75% {
+    border-bottom-color: #1F9BF3;
+  }
+  100% {
+    border-bottom-color: #717aed;
+  }
+}
+

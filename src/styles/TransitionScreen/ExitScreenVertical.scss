@@ -1,0 +1,28 @@
+.exitScreenVertical {
+  &__half {
+    position: fixed;
+
+    height: 50vh;
+    width: 100vw;
+
+    background-color: #141628;
+
+    border: 5px solid white;
+
+    z-index: 150;
+
+    &__top {
+      top: -50%;
+      left: 0;
+
+      border-bottom-width: 0;
+    }
+
+    &__bottom {
+      bottom: -50%;
+      left: 0;
+
+      border-top-width: 0;
+    }
+  }
+}

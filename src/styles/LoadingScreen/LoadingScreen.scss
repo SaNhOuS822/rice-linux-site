@@ -1,0 +1,69 @@
+.loadingScreen {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 150;
+
+  &__half {
+    flex: 1;
+
+    background-color: #141628;
+    // background-color: transparent;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 5px solid white;
+
+    &-container {
+      overflow: hidden;
+
+      height: 300px;
+      width: 100%;
+
+      text-align: center;
+    }
+
+    &-text {
+      display: inline-block;
+
+      text-align: center;
+
+      text-transform: uppercase;
+
+      font-size: 300px;
+      color: #ffffff;
+    }
+  }
+
+  &__top {
+    justify-content: flex-end;
+    border-bottom: none;
+
+    & span {
+      font-family: "Anurati Pro Outline";
+    }
+  }
+
+  &__bottom {
+    justify-content: flex-start;
+    border-top: none;
+
+    & span {
+      font-family: "Anurati Pro Filled";
+    }
+  }
+
+  &__underline {
+    height: 5px;
+    background-color: #ffffff;
+
+    z-index: 200;
+  }
+}
+

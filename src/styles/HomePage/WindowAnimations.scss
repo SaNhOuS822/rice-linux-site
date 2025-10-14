@@ -1,0 +1,156 @@
+$preview_height: 60vh;
+$preview_indent: 8vw;
+
+$border_width: 1.5vh;
+$border_radius: 15px;
+
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+
+.animations {
+  &__wrapper {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #222436;
+
+    overflow-x: hidden;
+  }
+
+  &__content {
+    &__wrapper {
+      height: 80%;
+      width: 90%;
+
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__infoBlock {
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+
+      flex: 12;
+
+      &-title {
+        font-family: 'Anurati Pro Filled';
+        font-size: 100px;
+        font-weight: 700;
+        color: white;
+
+        text-transform: uppercase;
+
+        margin-bottom: 20px;
+      }
+
+      &-text {
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 1;
+
+        &-word {
+          margin-right: 12px;
+          margin-top: 12px;
+
+          font-family: "Quicksand", serif;
+          font-weight: 700;
+          font-size: 50px;
+          color: white;
+
+          &-char {
+            &-wrapper {
+              position: relative;
+            }
+
+            font-family: "Quicksand", serif;
+            font-weight: 700;
+            font-size: 50px;
+            color: white;
+
+            &-shadow {
+              position: absolute;
+              top: -115%;
+              opacity: 0.1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__preview {
+    &__wrapper {
+      position: relative;
+
+      flex: 8;
+
+      height: $preview_height + 2 * $border_width;
+      width: 60vw;
+
+      margin: auto 0px;
+
+      left: $preview_indent;
+    }
+
+    position: absolute;
+
+    top: $border_width;
+    left: $border_width;
+
+    width: $preview_height * 1.7777777777777777778;
+    height: $preview_height;
+
+    min-height: $preview_height;
+    min-width: $preview_height * 1.7777777777777777778;
+
+    margin: auto;
+
+    border-radius: $border-radius;
+
+    &-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      height: $preview_height + 2 * $border_width;
+      width: $preview_height * 1.7777777777777777778 + 2 * $border_width;
+
+      background-image: conic-gradient(
+        from var(--angle),
+        #1F9BF3,
+        #C259E7,
+        #C259E7,
+        #1F9BF3
+      );
+
+      border-radius: calc($border-radius + $border_width);
+
+      animation: 3s spin linear infinite;
+
+      &-glow {
+        filter: blur(100px);
+        opacity: 0.7;
+      }
+    }
+  }
+}
