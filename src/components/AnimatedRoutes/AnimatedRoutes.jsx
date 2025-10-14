@@ -12,7 +12,6 @@ import { useState } from "react";
 
 export default function AnimatedRoutes({ pressedRoute }) {
   const location = useLocation();
-  const [loaded, setLoaded] = useState(false);
 
   return (
     <AnimatePresence mode='wait'>
@@ -20,8 +19,8 @@ export default function AnimatedRoutes({ pressedRoute }) {
         <Route
           path='/'
           element={
-            <PageWrapper path='/' pressedRoute={pressedRoute} loaded={loaded}>
-              <Mainscreen setLoaded={setLoaded} />
+            <PageWrapper path='/' pressedRoute={pressedRoute}>
+              <Mainscreen />
             </PageWrapper>
           }
         />

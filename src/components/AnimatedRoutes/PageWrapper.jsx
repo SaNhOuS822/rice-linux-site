@@ -1,8 +1,7 @@
 import { motion } from 'motion/react';
 import { useEffect, useState } from "react";
 
-import TransitionScreen, { SHOWING_DELAY as TRANSITION_SHOWING_DELAY, HIDING_DELAY as TRANSITION_HIDING_DELAY, HIDING_DURATION as TRANSITION_HIDING_DURATION } from "../TransitionScreen/TransitionScreen.jsx";
-import LoadingScreen, { SHOWING_DELAY as LOADING_SHOWING_DELAY, HIDING_DELAY as LOADING_HIDING_DELAY, HIDING_DURATION as LOADING_HIDING_DURATION } from "../LoadingScreen/LoadingScreen.jsx";
+import TransitionScreen, { HIDING_DELAY, HIDING_DURATION } from "../TransitionScreen/TransitionScreen.jsx";
 import ExitScreenVertical from "../TransitionScreen/ExitScreenVertical.jsx";
 import ExitScreenHorizontal from "../TransitionScreen/ExitScreenHorizontal.jsx";
 
@@ -15,21 +14,14 @@ const texsts = {
 }
 
 
-export default function PageWrapper({ path, pressedRoute, loaded, children }) {
+export default function PageWrapper({ path, pressedRoute, children }) {
   const [transition, setTransition] = useState(true);
-  const [delay, setDelay] = useState(false);
   const [renderExitScreen, setRenderExitScreen] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
       setTransition(false);
-    }, ((path != '/') ? (TRANSITION_HIDING_DELAY + TRANSITION_HIDING_DURATION) : (LOADING_HIDING_DELAY + LOADING_HIDING_DURATION)) * 1000);
-  }, []);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setDelay(true);
-    }, ((path != '/') ? (0) : (0)));
+    }, (HIDING_DELAY + HIDING_DURATION) * 1000);
   }, []);
 
   useEffect(() => {
@@ -40,20 +32,15 @@ export default function PageWrapper({ path, pressedRoute, loaded, children }) {
 
   return (
     <motion.div>
-      { transition && ((path != '/')
-        ? <TransitionScreen topText={texsts[path][0]} bottomText={texsts[path][1]} />
-        : <LoadingScreen loaded={loaded} />
-      )}
-      { delay && <>
-        {
-          renderExitScreen && (
-            (pressedRoute == "/")
+      {((path != '/') && transition && <TransitionScreen topText={texsts[path][0]} bottomText={texsts[path][1]} />)}
+      {
+        renderExitScreen && (
+          (pressedRoute == "/")
             ? <ExitScreenVertical />
             : <ExitScreenHorizontal />
-          )
-        }
-        { children }
-      </>}
+        )
+      }
+      { children }
     </motion.div>
   )
 }
