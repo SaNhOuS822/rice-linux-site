@@ -1,0 +1,54 @@
+.card {
+  &__blur {
+    position: absolute;
+
+    z-index: 9;
+
+    border-radius: 15px;
+
+    filter: blur(10px);
+  }
+
+  position: absolute;
+
+  z-index: 10;
+
+  border-radius: 15px;
+  background: transparent;
+  backdrop-filter: blur(15px);
+  padding: 20px 10px;
+
+  &__title {
+    text-align: center;
+
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+  }
+
+  &__underline {
+    border-radius: 1488px;
+    margin: 10px 0px;
+  }
+
+  &__content {
+    padding: 0px 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+
+.cwlps {
+  &__title {
+    color: white;
+    font-size: 100px;
+    font-weight: 700;
+
+    text-shadow: white 0 0 15px;
+
+    letter-spacing: 10px;
+    word-spacing: 20px;
+  }
+}
