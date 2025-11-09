@@ -1,4 +1,6 @@
-@import 'tailwindcss';
+@import './zero.css';
+
+@import 'tailwindcss' important;
 
 
 @font-face {

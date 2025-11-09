@@ -1,0 +1,45 @@
+.miniGitHub__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #25292e;
+
+  fill: white;
+
+  padding: 10px 16px;
+
+  &__search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 10px;
+
+    border: 3px solid #818B98;
+    border-radius: 5px;
+
+    width: 90px;
+  }
+
+  &__login {
+    margin-left: 20px;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 5px;
+
+    border: 3px solid white;
+    border-radius: 5px;
+
+    width: 26px;
+
+    margin-left: 20px;
+  }
+}

@@ -3,6 +3,7 @@ import { ReactLenis } from 'lenis/dist/lenis-react';
 import DesktopModel from '../../modules/Spline.jsx'
 import LoadingScreen, { HIDING_DELAY, HIDING_DURATION } from '../LoadingScreen/LoadingScreen.jsx'
 import WindowAnimations from './WindowAnimations.jsx'
+import ThemeChanging from './ThemeChanging.jsx';
 
 import '../../styles/HomePage/HomePage.scss'
 import { useEffect, useState } from 'react';
@@ -27,7 +28,7 @@ export default function MainScreen() {
         <ReactLenis root>
           <DesktopModel className="main__model" setLoaded={setLoaded} />
           <WindowAnimations />
-          <div className="h-screen bg-pink-300"></div>
+          <ThemeChanging />
         </ReactLenis>
       </div>
     </>

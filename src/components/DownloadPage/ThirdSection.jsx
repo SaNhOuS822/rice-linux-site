@@ -1,10 +1,13 @@
+import SectionWrapper from "./SectionWrapper.jsx";
+import RevealingText from './RevealingText';
+
 import '../../styles/DownloadPage/ThirdSection.scss';
 
 
 export default function ThirdSection() {
   return (
-    <div className="downloadPage__thirdSection bg-green-300">
+    <SectionWrapper className="bg-green-300 h-screen w-screen">
 
-    </div>
+    </SectionWrapper>
   )
 }

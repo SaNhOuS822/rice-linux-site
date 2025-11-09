@@ -32,7 +32,7 @@ export default function PageWrapper({ path, pressedRoute, children }) {
 
   return (
     <motion.div>
-      {((path != '/') && transition && <TransitionScreen topText={texsts[path][0]} bottomText={texsts[path][1]} />)}
+      {(path != '/') && transition && <TransitionScreen topText={texsts[path][0]} bottomText={texsts[path][1]} />}
       {
         renderExitScreen && (
           (pressedRoute == "/")

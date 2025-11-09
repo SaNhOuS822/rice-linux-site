@@ -53,14 +53,19 @@ $border_radius: 15px;
       flex: 12;
 
       &-title {
-        font-family: 'Anurati Pro Filled';
-        font-size: 100px;
-        font-weight: 700;
-        color: white;
-
-        text-transform: uppercase;
-
+        overflow: hidden;
         margin-bottom: 20px;
+
+        &-char {
+          font-family: 'Anurati Pro Filled';
+          font-size: 100px;
+          font-weight: 700;
+          color: white;
+
+          display: inline-block;
+
+          text-transform: uppercase;
+        }
       }
 
       &-text {

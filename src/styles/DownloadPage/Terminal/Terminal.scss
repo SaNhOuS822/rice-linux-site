@@ -1,0 +1,14 @@
+.terminal {
+  flex: 1;
+  border: 10px solid #929497;
+  background: #222436;
+  border-radius: 15px;
+  margin: 0px 35px;
+  padding: 35px;
+
+  * {
+    color: white;
+    font-weight: 700;
+    font-size: 30px;
+  }
+}

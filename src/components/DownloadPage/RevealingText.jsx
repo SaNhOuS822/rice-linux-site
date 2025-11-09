@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import '../../styles/DownloadPage/RevealingText.scss';
 
 
-export default function RevealingText({ fontSize, space, delay, children }) {
+export default function RevealingText({ fontSize, space, children }) {
   return (
     <div className="revealingText">
       {children.split('').map((c, i) => {
@@ -21,7 +21,7 @@ export default function RevealingText({ fontSize, space, delay, children }) {
               y: 0,
             }}
             transition={{
-              delay: delay + 0.02 * i,
+              delay: 0.02 * i,
               duration: 0.5,
               ease: 'backOut',
             }}

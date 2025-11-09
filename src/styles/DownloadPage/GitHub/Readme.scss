@@ -1,0 +1,33 @@
+.miniGitHub__readme {
+  border: 3px solid #3D444D;
+  border-radius: 10px;
+
+  &__code {
+    position: relative;
+    background: #151B23;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: white;
+
+    &__overlay {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      font-size: 30px;
+      overflow: hidden;
+
+      // mask-image: radial-gradient(transparent 50%, black 50% 100%);
+      mask-repeat: no-repeat;
+      mask-size: 580px 580px;
+      mask-position: center;
+    }
+  }
+}

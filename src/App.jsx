@@ -1,6 +1,6 @@
 import Header from './components/Header/Header.jsx'
-import './main.css'
-import './zero.css'
+// import './zero.css'
+// import './main.css'
 import AnimatedRoutes from './components/AnimatedRoutes/AnimatedRoutes.jsx';
 import { BrowserRouter } from 'react-router-dom'
 import { useState } from 'react';

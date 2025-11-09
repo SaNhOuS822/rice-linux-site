@@ -8,6 +8,7 @@ import '../../styles/HomePage/WindowAnimations.scss';
 
 function RevealingText({className, children}) {
   const element = useRef(null);
+
   const { scrollYProgress } = useScroll({
     target: element,
     offset: ['start 0.95', 'end 0.8']
@@ -57,14 +58,44 @@ function RevealingText({className, children}) {
 }
 
 
+function SlidingInText({ children }) {
+  const element = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: element,
+    offset: ['start 0.95', 'end -0.3']
+  });
+
+  const yi = useTransform(scrollYProgress, [0, 0.40, 0.45, 1], ['-100%', '0%', '0%', '100%']);
+  const yd = useTransform(scrollYProgress, [0, 0.40, 0.45, 1], ['100%', '0%', '0%', '-100%']);
+
+
+  return (
+    <h2 ref={element} className="animations__content__infoBlock-title">
+      {children.split('').map((c, i) => {
+        return (
+          <motion.span key={i} className="animations__content__infoBlock-title-char"
+            style={{
+              y: (i % 2) ? yd : yi
+            }}
+          >
+            {c}
+          </motion.span>
+        )
+      })}
+    </h2>
+  )
+}
+
+
 export default function WindowAnimations() {
   return (
     <div className="animations__wrapper">
       <div className="animations__content__wrapper">
         <div className="animations__content__infoBlock">
-          <h2 className="animations__content__infoBlock-title">
+          <SlidingInText>
             Animations
-          </h2>
+          </SlidingInText>
           <RevealingText className="animations__content__infoBlock-text">
             My dotfiles provides you beautiful animations right from the box. You can easily adjust them so they can match your preferences.
           </RevealingText>

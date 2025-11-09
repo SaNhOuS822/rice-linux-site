@@ -1,0 +1,91 @@
+  .miniGitHub {
+    &__wrapper {
+      overflow: hidden;
+
+      flex: 1;
+
+      margin: 0px 35px;
+
+      border-radius: 20px;
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    background: #0d1117;
+
+    border: 10px solid #25292e;
+    border-top: 0;
+
+    &__container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &__content {
+      flex: 1;
+
+      display: flex;
+      flex-direction: column;
+
+      &__repo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        margin: 15px;
+
+        &__autor {
+          display: flex;
+          flex-direction: row;
+        }
+
+        &__buttons {
+          display: flex;
+          flex-direction: row;
+          gap: 15px;
+
+          &-button {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            background-color: #212830;
+            border-radius: 5px;
+
+            padding: 5px;
+          }
+        }
+      }
+
+      &__menu {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        border-bottom: 1px solid #2F353D;
+
+        &__selected {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          border-bottom: 2px solid #F78166;
+
+          width: 52px;
+          margin-left: 20px;
+          padding: 0px 5px;
+          padding-bottom: 5px;
+        }
+      }
+
+      &__structure {
+        display: flex;
+        flex-direction: row;
+
+        gap: 15px;
+
+        margin: 15px 20vw;
+      }
+    }
+  }
