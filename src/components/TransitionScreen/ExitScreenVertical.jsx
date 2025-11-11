@@ -3,6 +3,9 @@ import { motion } from 'motion/react';
 import '../../styles/TransitionScreen/ExitScreenVertical.scss';
 
 
+export const DURATION = 0.5;
+
+
 export default function ExitScreenVertical() {
   return (
     <>
@@ -11,7 +14,7 @@ export default function ExitScreenVertical() {
           top: 0,
         }}
         transition={{
-          duration: 0.5,
+          duration: DURATION,
           ease: 'easeInOut',
         }}
       />
@@ -20,7 +23,7 @@ export default function ExitScreenVertical() {
           bottom: 0,
         }}
         transition={{
-          duration: 0.5,
+          duration: DURATION,
           ease: 'easeInOut',
         }}
       />

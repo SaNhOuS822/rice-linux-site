@@ -9,7 +9,7 @@ export default function Readme() {
   const [scope, animate] = useAnimate();
 
   setTimeout(() => {
-    if (scope.current != null) animate(scope.current, { maskImage: 'radial-gradient(transparent 72%, black 72% 100%)' }, { delay: 3.3, duration: 0.5, ease: 'easeInOut' });
+    if (scope.current != null) animate(scope.current, { maskImage: 'radial-gradient(transparent 72%, black 72% 100%)' }, { delay: 2.2, duration: 0.5, ease: 'easeInOut' });
   }, 2000);
 
   return (
@@ -61,7 +61,7 @@ export default function Readme() {
             width: '100%',
           }}
           transition={{
-            delay: 5,
+            delay: 3.5,
             duration: 0.5,
             ease: 'easeInOut',
           }}

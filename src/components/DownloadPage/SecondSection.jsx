@@ -7,9 +7,9 @@ import '../../styles/DownloadPage/SecondSection.scss';
 
 export default function SecondSection() {
   return (
-    <SectionWrapper className="bg-pink-300 h-screen w-screen">
-      <div className="flex flex-col gap-[75px] h-screen w-screen p-[100px] pb-[50px] overflow-hidden">
-        <RevealingText fontSize={100} space={25}>2) Past it in terminal</RevealingText>
+    <SectionWrapper className="bg-transparent h-screen w-screen">
+      <div className="flex flex-col gap-[90px] h-screen w-screen p-[120px] pb-[50px] z-50">
+        <RevealingText fontSize={100} space={25}>2) Past it in the Terminal</RevealingText>
         <Terminal />
       </div>
     </SectionWrapper>

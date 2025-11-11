@@ -73,7 +73,6 @@ export function UtilDesc({ utils, cpi, transition }) {
                 const [scope, animate] = useAnimate();
 
                 useEffect(() => {
-                  console.log(`TOP: ${40 * (i - cpi)}`);
                   animate(scope.current, { top: 40 * (i - cpi) }, transition);
                 }, [cpi]);
 

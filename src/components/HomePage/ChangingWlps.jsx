@@ -49,13 +49,13 @@ export default function ChangingWlps({ children, duration, delay, cwlp }) {
     <div className="relative h-full w-full">
       <motion.img ref={bottom} className={img_classes}
         style={{ zIndex: 3 }}
-        src={`../../../public/wlps/${wlps[0]}`}
+        src={`wlps/${wlps[0]}`}
         alt={`Wallpaper '${wlps[0]}' haven't been found!`}
       />
 
       <motion.img ref={top} className={img_classes}
         style={{ zIndex: 4 }}
-        src={`../../../public/wlps/${wlps[0]}`}
+        src={`wlps/${wlps[0]}`}
         alt={`Wallpaper '${wlps[0]}' haven't been found!`}
 
         initial={{
@@ -66,13 +66,13 @@ export default function ChangingWlps({ children, duration, delay, cwlp }) {
       <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full ${blur_classes}`}>
         <motion.img ref={bottomBlur} className={img_classes}
           style={{ zIndex: 1 }}
-          src={`../../../public/wlps/${wlps[0]}`}
+          src={`wlps/${wlps[0]}`}
           alt={`Wallpaper '${wlps[0]}' haven't been found!`}
         />
 
         <motion.img ref={topBlur} className={img_classes}
           style={{ zIndex: 2 }}
-          src={`../../../public/wlps/${wlps[0]}`}
+          src={`wlps/${wlps[0]}`}
           alt={`Wallpaper '${wlps[0]}' haven't been found!`}
 
           initial={{

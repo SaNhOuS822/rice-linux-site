@@ -6,11 +6,11 @@ import '../../styles/Header/Menu.scss';
 
 function PageLink({className, to, setPressedRoute, children}) {
   return (
-    <motion.div className="header__menu-link-wrapper"
+    <motion.div className="relative"
       initial='initial'
       whileHover='hovered'
     >
-      <Link to={to} className={className} onClick={() => setPressedRoute(to)}>
+      <Link to={to} className='relative overflow-hidden flex-1 inline-block whitespace-nowrap text-white font-bold text-[20px] cursor-pointer' onClick={() => setPressedRoute(to)}>
         <div className={`${className}-text-showed`}>
           {children.split('').map((char, index) => {
             return (

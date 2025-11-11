@@ -6,7 +6,7 @@ import '../../styles/DownloadPage/FourthSection.scss';
 
 export default function FourthSection() {
   return (
-    <SectionWrapper className="bg-yellow-300 h-screen w-screen">
+    <SectionWrapper className="bg-transparent h-screen w-screen">
 
     </SectionWrapper>
   )

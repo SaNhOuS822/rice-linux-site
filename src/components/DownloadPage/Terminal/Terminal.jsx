@@ -6,8 +6,8 @@ const text = [
   'git clone https://github.com/SaNhOuS228/dotfiles',
   'cd dotfiles',
   'sh ./install.sh',
-  '// This comand will run',
-  '// Installation script'
+  '// This comand will run installation script',
+  '// Hope you have Arch Linux installed already'
 ]
 
 

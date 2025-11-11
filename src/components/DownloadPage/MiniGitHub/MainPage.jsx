@@ -14,7 +14,7 @@ export default function MainPage({ csi }) {
   const [miniGH, animateMiniGH] = useAnimate();
 
   setTimeout(() => {
-    if (miniGH.current != null) animateMiniGH(miniGH.current, { y: -3280 }, { delay: 1, duration: 1.5, ease: 'easeInOut' });
+    if (miniGH.current != null) animateMiniGH(miniGH.current, { y: -2800 }, { delay: 1, duration: 1.5, ease: 'easeInOut' });
   }, 1 * 1000);
 
   return (

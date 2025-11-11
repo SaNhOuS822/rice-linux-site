@@ -3,7 +3,8 @@ import Header from './components/Header/Header.jsx'
 // import './main.css'
 import AnimatedRoutes from './components/AnimatedRoutes/AnimatedRoutes.jsx';
 import { BrowserRouter } from 'react-router-dom'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import ScrollToTop from './modules/ScrollToTop.jsx';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Header setPressedRoute={setPressedRoute} />
       <AnimatedRoutes pressedRoute={pressedRoute} />
     </BrowserRouter>

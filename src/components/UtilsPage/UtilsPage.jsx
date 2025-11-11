@@ -146,7 +146,6 @@ function UtilImage({ index, util, cpi }) {
   const [animDelay, setAnimDelay] = useState(HIDING_DELAY + HIDING_DURATION);
 
   useEffect(() => {
-    console.log(`[CPI] ${cpi}`)
     animate(scope.current,
       {
         translateX: '-50%',
@@ -200,8 +199,6 @@ export default function UtilsPage() {
   const handleWheel = (event) => {
     if (!stopScroll.current) {
       const d = 2 * (event.deltaY > 0) - 1;
-
-      console.log(`[SCROLLED] CPI + D: ${cpi + d} | D: ${d} | CPI: ${cpi}`)
 
       if (0 <= cpi + d && cpi + d < utils.length) {
         stopScroll.current = true;
