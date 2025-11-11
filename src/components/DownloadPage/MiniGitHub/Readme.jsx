@@ -21,12 +21,12 @@ export default function Readme() {
       <div className="text-center text-white text-[40px] font-bold mt-[20px]">Gallery</div>
 
       <div className="flex flex-col items-center gap-[30px] mt-[20px] mr-[40px] ml-[40px]">
-        <img className='rounded-[10px]' src='../../../../public/gallery/morning-ocean-sea-sunset-art-minimalistic.png' alt="" />
-        <img className='rounded-[10px]' src='../../../../public/gallery/neon-hole-art-minimalistic-space-blackhole-fetch-cava-rofi.png' alt="" />
-        <img className='rounded-[10px]' src='../../../../public/gallery/samurai-japanese-light-art-live-0-video-minimalistic-fastfetch.png' alt="" />
-        <img className='rounded-[10px]' src='../../../../public/gallery/lake-tree-sunset-mountain-yazi-pipes.png' alt="" />
-        <img className='rounded-[10px]' src='../../../../public/gallery/berserk-swords-anime-art-minimalistic-telegram.png' alt="" />
-        <img className='rounded-[10px]' src='../../../../public/gallery/sunakku-pixel-street-house-morning-day-live-0-video-btop.png' alt="" />
+        <img className='rounded-[10px]' src='gallery/morning-ocean-sea-sunset-art-minimalistic.png' alt="" />
+        <img className='rounded-[10px]' src='gallery/neon-hole-art-minimalistic-space-blackhole-fetch-cava-rofi.png' alt="" />
+        <img className='rounded-[10px]' src='gallery/samurai-japanese-light-art-live-0-video-minimalistic-fastfetch.png' alt="" />
+        <img className='rounded-[10px]' src='gallery/lake-tree-sunset-mountain-yazi-pipes.png' alt="" />
+        <img className='rounded-[10px]' src='gallery/berserk-swords-anime-art-minimalistic-telegram.png' alt="" />
+        <img className='rounded-[10px]' src='gallery/sunakku-pixel-street-house-morning-day-live-0-video-btop.png' alt="" />
       </div>
 
       <div className="border-b-[2px] border-[#3D444D] m-[50px] mb-0" />

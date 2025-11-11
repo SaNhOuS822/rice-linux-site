@@ -16,11 +16,12 @@ export default function ChangingWlps({ children, duration, delay, cwlp }) {
 
   const img_classes = 'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[75%] h-auto rounded-[15px]';
   const blur_classes = 'scale-[105%] blur-[40px]';
+  const dir_path = 'wlps/';
 
 
   useEffect(() => {
-    top.current.src = `../../../public/wlps/${wlps[cwlp]}`
-    topBlur.current.src = `../../../public/wlps/${wlps[cwlp]}`
+    top.current.src = `${dir_path}${wlps[cwlp]}`
+    topBlur.current.src = `${dir_path}${wlps[cwlp]}`
 
     topAnimate(top.current, {
       clipPath: 'circle(1000px)',
@@ -31,8 +32,8 @@ export default function ChangingWlps({ children, duration, delay, cwlp }) {
     }, { duration: duration, ease: 'easeInOut' });
 
     setTimeout(() => {
-      bottom.current.src = `../../../public/wlps/${wlps[cwlp]}`
-      bottomBlur.current.src = `../../../public/wlps/${wlps[cwlp]}`
+      bottom.current.src = `${dir_path}${wlps[cwlp]}`
+      bottomBlur.current.src = `${dir_path}${wlps[cwlp]}`
 
       topAnimate(top.current, {
         clipPath: 'circle(0px)',
@@ -49,13 +50,13 @@ export default function ChangingWlps({ children, duration, delay, cwlp }) {
     <div className="relative h-full w-full">
       <motion.img ref={bottom} className={img_classes}
         style={{ zIndex: 3 }}
-        src={`wlps/${wlps[0]}`}
+        src={`${dir_path}/${wlps[0]}`}
         alt={`Wallpaper '${wlps[0]}' haven't been found!`}
       />
 
       <motion.img ref={top} className={img_classes}
         style={{ zIndex: 4 }}
-        src={`wlps/${wlps[0]}`}
+        src={`${dir_path}/${wlps[0]}`}
         alt={`Wallpaper '${wlps[0]}' haven't been found!`}
 
         initial={{
@@ -66,13 +67,13 @@ export default function ChangingWlps({ children, duration, delay, cwlp }) {
       <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full ${blur_classes}`}>
         <motion.img ref={bottomBlur} className={img_classes}
           style={{ zIndex: 1 }}
-          src={`wlps/${wlps[0]}`}
+          src={`${dir_path}/${wlps[0]}`}
           alt={`Wallpaper '${wlps[0]}' haven't been found!`}
         />
 
         <motion.img ref={topBlur} className={img_classes}
           style={{ zIndex: 2 }}
-          src={`wlps/${wlps[0]}`}
+          src={`${dir_path}/${wlps[0]}`}
           alt={`Wallpaper '${wlps[0]}' haven't been found!`}
 
           initial={{

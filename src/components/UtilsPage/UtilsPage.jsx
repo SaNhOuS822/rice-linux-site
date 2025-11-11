@@ -21,7 +21,7 @@ const getUtils = () => {
       stars: '93.2k',
       watching: '981',
       forks: '6.4k',
-      preview: '../../../public/utils_imgs/nvim-1.png',
+      preview: 'utils_imgs/nvim-1.png',
       desc: [
         'Lightweight and customi-',
         'zable Vim-based text edi-',
@@ -35,7 +35,7 @@ const getUtils = () => {
       stars: '29.2k',
       watching: '191',
       forks: '1.2k',
-      preview: '../../../public/utils_imgs/kitty-0.png',
+      preview: 'utils_imgs/kitty-0.png',
       desc: [
         'Simple terminal emulator  ',
         'with cursor trail',
@@ -49,7 +49,7 @@ const getUtils = () => {
       stars: '39.1k',
       watching: '437',
       forks: '2.3k',
-      preview: '../../../public/utils_imgs/tmux-0.png',
+      preview: 'utils_imgs/tmux-0.png',
       desc: [
         'Terminal multiplexer with ',
         'oh-my-tmux and color',
@@ -65,7 +65,7 @@ const getUtils = () => {
       forks: '900',
       previewPosition: 'center center',
       previewSize: 'auto 100%',
-      preview: '../../../public/utils_imgs/waybar-0.png',
+      preview: 'utils_imgs/waybar-0.png',
       desc: [
         'Customizable desktop bar  ',
         'with adjusted colors for  ',
@@ -79,7 +79,7 @@ const getUtils = () => {
       stars: '11.5k',
       watching: '48',
       forks: '489',
-      preview: '../../../public/utils_imgs/eww-0.png',
+      preview: 'utils_imgs/eww-0.png',
       previewPosition: 'center center',
       previewSize: 'auto 100%',
       desc: [
@@ -95,7 +95,7 @@ const getUtils = () => {
       stars: '3.4k',
       watching: '12',
       forks: '94',
-      preview: '../../../public/utils_imgs/swww-3.png',
+      preview: 'utils_imgs/swww-3.png',
       previewPosition: '60% center',
       previewSize: 'auto 100%',
       desc: [
@@ -112,7 +112,7 @@ const getUtils = () => {
       watching: '95',
       forks: '655',
 
-      preview: '../../../public/utils_imgs/rofi-0.png',
+      preview: 'utils_imgs/rofi-0.png',
       previewPosition: 'center center',
       desc: [
         'Custom menu for creating',
