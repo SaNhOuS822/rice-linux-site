@@ -77,7 +77,7 @@ export default function ThemeChanging() {
         <AnimatedH2>Adaptive Theme</AnimatedH2>
         {cards_params.map((param, i) => {
           return (
-            <>
+            <div key={i}>
               <motion.div ref={cards[i].blur} className={`card__blur ${param.xy}`}
                 initial={{
                   border: `5px solid ${colors[0]}`
@@ -100,7 +100,7 @@ export default function ThemeChanging() {
                   { param.text }
                 </p>
               </motion.div>
-            </>
+            </div>
           )
         })}
       </div>

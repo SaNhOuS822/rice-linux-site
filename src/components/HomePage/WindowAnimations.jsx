@@ -103,7 +103,7 @@ export default function WindowAnimations() {
         <motion.div className="animations__preview__wrapper" drag dragSnapToOrigin>
           <div className="animations__preview-background" />
           <div className="animations__preview-background animations__preview-background-glow" />
-          <video muted={true} autoPlay={true} loop={true} src="public/windows_animations_preview.mp4" className="animations__preview" />
+          <video muted={true} autoPlay={true} loop={true} src="windows_animations_preview.mp4" className="animations__preview" />
         </motion.div>
       </div>
     </div>
