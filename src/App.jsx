@@ -11,7 +11,7 @@ function App() {
   const [pressedRoute, setPressedRoute] = useState('');
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/rice-linux-site/'>
       <ScrollToTop />
       <Header setPressedRoute={setPressedRoute} />
       <AnimatedRoutes pressedRoute={pressedRoute} />
