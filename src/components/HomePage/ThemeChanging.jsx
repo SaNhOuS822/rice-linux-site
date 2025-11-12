@@ -73,7 +73,7 @@ export default function ThemeChanging() {
   return (
     <div className="bg-[#222436] h-screen w-screen p-[130px_100px_70px_100px] overflow-hidden">
       <div className="h-full w-full relative">
-        <ChangingWlps cwlp={cwlp} duration={duration} delay={delay}>neon_hole.jpg show.gif ocean.jpg bridge.jpg cafe.gif pc.gif street.gif</ChangingWlps>
+        <ChangingWlps cwlp={cwlp} duration={duration} delay={delay}>neon_hole.jpg snow.gif ocean.jpg bridge.jpg cafe.gif pc.gif street.gif</ChangingWlps>
         <AnimatedH2>Adaptive Theme</AnimatedH2>
         {cards_params.map((param, i) => {
           return (
