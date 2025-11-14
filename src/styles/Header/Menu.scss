@@ -15,8 +15,8 @@ $lg_anim_duration: 3s;
     justify-content: center;
 
     & li:not(:last-child) {
-      margin-right: 25px;
-      padding-right: 25px;
+      margin-right: calc(100vw * 0.0134);
+      padding-right: calc(100vw * 0.0134);
       border-right: 2px solid white;
     }
   }
@@ -75,20 +75,14 @@ $lg_anim_duration: 3s;
 
       animation: triangleAnimation $lg_anim_duration linear infinite;
     }
+  }
 
-    position: relative;
-    flex: 1;
-
-    display: inline-block;
-    overflow: hidden;
-
-    white-space: nowrap;
-
+  &-text {
     font-weight: 700;
-    font-size: 20px;
-    color: white;
-
+    // font-size: 50px;
+    font-size: calc(100vh * 0.0222);
     cursor: pointer;
+    white-space: nowrap;
   }
 }
 

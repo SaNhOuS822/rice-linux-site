@@ -1,19 +1,21 @@
+$height: calc(100vh * 0.0277);
+
 .header__links {
   &-list {
     display: flex;
     flex-direction: horizontal;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: calc(100vw * 0.01);
     height: 100%;
     width: 100%;
   }
 
   &-logo {
-    min-height: 25px;
-    max-height: 25px;
-    min-width: 25px;
-    max-width: 25px;
+    min-height: $height;
+    max-height: $height;
+    min-width: $height;
+    max-width: $height;
   }
 
   &-link {

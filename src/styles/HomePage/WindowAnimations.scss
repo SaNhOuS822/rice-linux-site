@@ -4,6 +4,9 @@ $preview_indent: 8vw;
 $border_width: 1.5vh;
 $border_radius: 15px;
 
+$font_title: 100px;
+$font_info: 50px;
+
 
 @property --angle {
   syntax: "<angle>";
@@ -58,7 +61,7 @@ $border_radius: 15px;
 
         &-char {
           font-family: 'Anurati Pro Filled';
-          font-size: 100px;
+          font-size: $font_title;
           font-weight: 700;
           color: white;
 
@@ -79,7 +82,7 @@ $border_radius: 15px;
 
           font-family: "Quicksand", serif;
           font-weight: 700;
-          font-size: 50px;
+          font-size: $font_info;
           color: white;
 
           &-char {
@@ -89,7 +92,7 @@ $border_radius: 15px;
 
             font-family: "Quicksand", serif;
             font-weight: 700;
-            font-size: 50px;
+            font-size: $font_info;
             color: white;
 
             &-shadow {

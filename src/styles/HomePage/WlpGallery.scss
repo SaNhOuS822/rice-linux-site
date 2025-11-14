@@ -1,0 +1,28 @@
+$perspective: 10000px;
+
+
+.carousel {
+  transform-style: preserve-3d;
+  transform: perspective($perspective) rotateY(-16deg) ;
+
+  // animation: rotate 10s linear infinite;
+
+  &__item {
+    $height: 35vh;
+
+    width: $height * (16/9);
+    height: $height;
+    display: block;
+    top: 30%;
+    left: 50%;
+  }
+}
+
+
+@keyframes rotate {
+  from {
+    transform: perspective($perspective) rotateX(0deg);
+  } to {
+    transform: perspective($perspective) rotateX(360deg);
+  }
+}

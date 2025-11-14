@@ -17,7 +17,7 @@ export default function Header({ setPressedRoute }) {
   const { scrollY } = useScroll();
 
   const opacity = useTransform(scrollY, [0, innerHeight * 0.563535911], [0, 1]);
-  const top = useTransform(scrollY, [0, innerHeight * 0.46, innerHeight * 0.563535911], [0, 65, 58]);
+  const top = useTransform(scrollY, [0, innerHeight * 0.46, innerHeight * 0.563535911], [0, innerHeight * 0.075, innerHeight * 0.0664]);
 
   const width = useTransform(scrollY, [innerHeight * 0.563535911, innerHeight * 0.8],  (location.pathname != '/utils' && location.pathname != '/download') ? ['0.3%', '100%'] : [0, 0]);
   const height = useTransform(scrollY, [innerHeight * 0.563535911, innerHeight * 0.8], (location.pathname != '/utils' && location.pathname != '/download') ? [screenWidth / 300, 2] : [0, 0]);

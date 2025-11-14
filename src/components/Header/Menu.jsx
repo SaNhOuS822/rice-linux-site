@@ -10,11 +10,11 @@ function PageLink({className, to, setPressedRoute, children}) {
       initial='initial'
       whileHover='hovered'
     >
-      <Link to={to} className='relative overflow-hidden flex-1 inline-block whitespace-nowrap text-white font-bold text-[20px] cursor-pointer' onClick={() => setPressedRoute(to)}>
+      <Link to={to} className='relative overflow-hidden flex-1 inline-block' onClick={() => setPressedRoute(to)}>
         <div className={`${className}-text-showed`}>
           {children.split('').map((char, index) => {
             return (
-              <motion.span key={index} className='inline-block'
+              <motion.span key={index} className='header__menu-text inline-block text-white'
                 variants={{
                   initial: {
                     y: 0
@@ -34,7 +34,7 @@ function PageLink({className, to, setPressedRoute, children}) {
         <div className={`${className}-text-showing absolute inset-0` }>
           {children.split('').map((char, index) => {
             return (
-              <motion.span key={index} className='inline-block'
+              <motion.span key={index} className='header__menu-text inline-block text-transparent'
                 variants={{
                   initial: {
                     y: '100%'

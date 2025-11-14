@@ -30,16 +30,51 @@ export default function ThemeChanging() {
   let cards = [{}, {}];
   let cards_params = [
     {
-      xy: 'top-[50%] left-[5%] w-[300px] h-[400px]',
+      // xy: 'top-[50%] left-[5%] w-[300px] h-[400px]',
+      xy: {
+        top: '50%',
+        left: '5%',
+        width: '300px',
+        height: '400px',
+        opacity: 1,
+      },
+      initial: {
+        top: '50%',
+        left: '0%',
+        width: '300px',
+        height: '400px',
+        opacity: 0,
+        border: `5px solid ${colors[0]}`
+      },
       title: 'Colors',
       text: 'OS colors adapsts to your wallpapers colors automaticly when you changing your wallpapers. So you should not worry about your theme colors, just pick right wallpaper and your\'re done',
     },
     {
-      xy: 'top-[70%] left-[60%] w-[600px] h-[250px]',
+      // xy: 'top-[70%] left-[60%] w-[600px] h-[250px]',
+      xy: {
+        top: '70%',
+        left: '60%',
+        width: '600px',
+        height: '250px',
+        opacity: 1,
+      },
+      initial: {
+        top: '70%',
+        left: '70%',
+        width: '600px',
+        height: '250px',
+        opacity: 0,
+        border: `5px solid ${colors[0]}`
+      },
       title: 'Apps',
       text: 'Many app colors also adapts to your wallpapers colors, it works with GTK custom themes. But many CMDs also have colors depended on OS themes. But sadly: Neovim, Dolphin, Nautilus themes does not have OS colors',
     },
   ];
+  let card_transition = {
+    duration: 1,
+    delay: 0.5,
+    ease: 'backOut',
+  }
 
   for (let i = 0; i < cards.length; i++) {
     [cards[i].card, cards[i].cardAnimate] = useAnimate();
@@ -71,7 +106,7 @@ export default function ThemeChanging() {
   }, [cwlp]);
 
   return (
-    <div className="bg-[#222436] h-screen w-screen p-[130px_100px_70px_100px] overflow-hidden">
+    <div className="bg-[#222436] h-screen w-screen p-[100px_100px_100px_100px] overflow-hidden">
       <div className="h-full w-full relative">
         <ChangingWlps cwlp={cwlp} duration={duration} delay={delay}>neon_hole.jpg snow.gif ocean.jpg bridge.jpg cafe.gif pc.gif street.gif</ChangingWlps>
         <AnimatedH2>Adaptive Theme</AnimatedH2>
@@ -79,14 +114,14 @@ export default function ThemeChanging() {
           return (
             <div key={i}>
               <motion.div ref={cards[i].blur} className={`card__blur ${param.xy}`}
-                initial={{
-                  border: `5px solid ${colors[0]}`
-                }}
+                initial={ param.initial }
+                whileInVIew={ param.xy }
+                transition={ card_transition }
               />
               <motion.div ref={cards[i].card} className={`card ${param.xy}`}
-                initial={{
-                  border: `5px solid ${colors[0]}`
-                }}
+                initial={ param.initial }
+                whileInView={ param.xy }
+                transition={ card_transition }
               >
                 <h3 className="card__title">
                   { param.title }
