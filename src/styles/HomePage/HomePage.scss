@@ -1,3 +1,19 @@
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+
+@keyframes rotate {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
 .main {
   height: 100vh;
   width: 100vw;
@@ -9,4 +25,35 @@
       overflow: hidden;
     }
   }
+
+  &__title {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    text-align: center;
+    font-weight: 700;
+    color: transparent;
+    background-clip: text;
+    background-image: conic-gradient(from var(--angle), #1F9BF3, #C259E7, #C259E7, #1F9BF3);
+    font-size: calc(100vh * 0.155);
+
+    animation: rotate 3s linear infinite;
+
+    &__blur {
+      filter: blur(calc(100vh * 0.08));
+      transform: scale(1.2);
+    }
+  }
+
+  &__info {
+    text-align: center;
+    position: absolute;
+    top: 60%;
+    left: 0;
+    color: white;
+    font-weight: 700;
+    text-shadow: white 0 0 50px;
+    font-size: calc(100vh * 0.08);
+  }
 }
+

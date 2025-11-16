@@ -72,7 +72,7 @@ export default function ThemeChanging() {
   ];
   let card_transition = {
     duration: 1,
-    delay: 0.5,
+    delay: 0.25,
     ease: 'backOut',
   }
 

@@ -2,10 +2,27 @@ $perspective: 10000px;
 
 
 .carousel {
-  transform-style: preserve-3d;
-  transform: perspective($perspective) rotateY(-16deg) ;
+  &__wrapper {
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 30;
+      width: 100%;
+      height: 25%;
+    }
 
-  // animation: rotate 10s linear infinite;
+    &::before {
+      top: 0;
+      background-image: linear-gradient(#222436, transparent);
+    }
+
+    &::after {
+      bottom: 0;
+      background-image: linear-gradient(transparent, #222436);
+    }
+  }
 
   &__item {
     $height: 35vh;
@@ -14,15 +31,15 @@ $perspective: 10000px;
     height: $height;
     display: block;
     top: 30%;
-    left: 50%;
-  }
-}
+    right: -50%;
 
+    &__blur {
+      $height: 36vh;
 
-@keyframes rotate {
-  from {
-    transform: perspective($perspective) rotateX(0deg);
-  } to {
-    transform: perspective($perspective) rotateX(360deg);
+      width: $height * calc(16/9);
+      height: $height;
+
+      filter: blur(25px);
+    }
   }
 }

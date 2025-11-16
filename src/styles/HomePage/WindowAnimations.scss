@@ -6,6 +6,8 @@ $border_radius: 15px;
 
 $font_title: 100px;
 $font_info: 50px;
+$font_title: calc(100vh * 0.1110);
+$font_info: calc(100vh * 0.0550);
 
 
 @property --angle {
@@ -37,6 +39,7 @@ $font_info: 50px;
     background-color: #222436;
 
     overflow-x: hidden;
+    overflow-y: visible;
   }
 
   &__content {
@@ -97,7 +100,7 @@ $font_info: 50px;
 
             &-shadow {
               position: absolute;
-              top: -115%;
+              bottom: 0;
               opacity: 0.1;
             }
           }
@@ -156,7 +159,7 @@ $font_info: 50px;
       animation: 3s spin linear infinite;
 
       &-glow {
-        filter: blur(100px);
+        filter: blur(calc(100vh * 0.1110));
         opacity: 0.7;
       }
     }

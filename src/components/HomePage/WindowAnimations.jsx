@@ -90,7 +90,7 @@ function SlidingInText({ children }) {
 
 export default function WindowAnimations() {
   return (
-    <div className="animations__wrapper">
+    <div className="animations__wrapper overflow-hidden">
       <div className="animations__content__wrapper">
         <div className="animations__content__infoBlock">
           <SlidingInText>
