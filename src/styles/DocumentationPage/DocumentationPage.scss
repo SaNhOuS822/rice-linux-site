@@ -1,4 +1,24 @@
-.documentationPage {
-  height: 100vh;
-  width: 100vw;
+$perspective: 112vh;
+
+
+.slider {
+  transform-style: preserve-3d;
+  transform: perspective($perspective) rotateX(-16deg);
+
+  animation: slider 10s linear infinite;
+  
+  & p {
+    font-size: calc(100vh / 9);
+  }
 }
+
+
+@keyframes slider {
+  from {
+    transform: perspective($perspective) rotateX(-16deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective($perspective) rotateX(-16deg) rotateY(-360deg);
+  }
+}
+
