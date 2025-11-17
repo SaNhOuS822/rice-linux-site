@@ -14,6 +14,22 @@
   }
 }
 
+@keyframes artRotate {
+  from {
+    transform: perspective(112vh) rotateX(-16deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(112vh) rotateX(-16deg) rotateY(-360deg);
+  }
+}
+
+.art {
+  top: calc(45vh - 30vh);
+  left: calc(50vw - 30vw);
+
+  animation: artRotate 10s linear infinite;
+}
+
 .main {
   height: 100vh;
   width: 100vw;
