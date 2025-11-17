@@ -18,6 +18,11 @@ export default function MainScreen() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (loaded == false) {
+      setTimeout(() => {
+        setLoaded(true);
+      }, 3 * 1000);
+    }
     if (loaded == true) {
       setTimeout(() => {
         setLoading(false);
