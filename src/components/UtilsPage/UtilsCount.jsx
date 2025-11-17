@@ -30,7 +30,7 @@ const numbers = [
 ]
 
 
-export default function UtilsCount({ cpi, delay, extraClass }) {
+export default function UtilsCount({ cpi, delay, style }) {
   const paths = useRef([]);
   const circles = useRef([]);
 
@@ -59,7 +59,7 @@ export default function UtilsCount({ cpi, delay, extraClass }) {
 
 
   return (
-    <svg className={`utils__count-svg ${extraClass}`} viewBox={`0 0 ${svgViewBoxSize} ${svgViewBoxSize}`}>
+    <svg className={`utils__count-svg`} viewBox={`0 0 ${svgViewBoxSize} ${svgViewBoxSize}`} style={ style }>
       <defs>
         <filter id='filter'>
           <feGaussianBlur in='SourceAlpha' stdDeviation='10' result='blur' /> 

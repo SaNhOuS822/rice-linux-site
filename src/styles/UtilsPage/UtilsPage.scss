@@ -20,15 +20,6 @@ $imagePadding: 1.5vh;
   }
 }
 
-@keyframes fontSizeIncreasing {
-  from {
-    font-size: 1px;
-  }
-  to {
-    font-size: 90px;
-  }
-}
-
 
 .utils {
   position: relative;
@@ -47,13 +38,13 @@ $imagePadding: 1.5vh;
 
     z-index: -1;
 
-    inset: -2em;
+    inset: calc(-100vh * 0.0354);
 
     background: #222436;
 
-    filter: blur(20px);
+    filter: blur(calc(100vh * 0.0221));
 
-    border: 45px solid transparent;
+    border: 5vh solid transparent;
     border-image: conic-gradient(from var(--angle), #25283b, #25283b,#25283b, #C259E7, #C259E7, #25283b,#25283b, #25283b) 1;
 
     animation: spin 3s linear infinite;
@@ -99,7 +90,7 @@ $imagePadding: 1.5vh;
     }
 
     &::after {
-      filter: blur(25px);
+      filter: blur(calc(100vh * 0.0276));
     }
 
     display: flex;
@@ -110,10 +101,6 @@ $imagePadding: 1.5vh;
     border-radius: $imageBorderRadius;
     padding: $imagePadding;
 
-    font-size: 200px;
-    font-weight: 700;
-    color: white;
-
     &-img {
       &__wrapper {
         overflow: hidden;
@@ -123,7 +110,6 @@ $imagePadding: 1.5vh;
 
         border-radius: calc($imageBorderRadius - $imagePadding);
       }
-
     }
   }
 
@@ -136,8 +122,8 @@ $imagePadding: 1.5vh;
       transform: translateX(-50%) translateY(-15%);
       z-index: 60;
 
-      height: 150px;
-      width: 250px;
+      height: calc(100vh * 0.1659);
+      width: calc(100vw * 0.1386);
 
       display: flex;
       flex-direction: row;
@@ -159,17 +145,9 @@ $imagePadding: 1.5vh;
       }
     }
 
-    &__current {
-      transform: translateX(30%) translateY(2%) scale(0.5);
-    }
-
-    &__total {
-      transform: translateX(-30%) translateY(2%) scale(0.5);
-    }
-
     &-separator {
-      min-width: 51px;
-      min-height: 90px;
+      min-width: calc(100vw * 0.0283);
+      min-height: 10vh;
 
       color: white;
       font-weight: 700;

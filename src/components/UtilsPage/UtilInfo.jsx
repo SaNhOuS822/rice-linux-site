@@ -37,12 +37,12 @@ export function UtilInfo({ utils, cpi, transition }) {
   return (
     <div className="util__info__wrapper">
       <div className="util__info">
-        <SectionedText utils={utils} cpi={cpi} stat='title' textSur={['', '']} height={90} transition={transition} />
-        <SectionedText utils={utils} cpi={cpi} stat='github' textSur={['', '']} height={40} transition={transition} />
+        <SectionedText utils={utils} cpi={cpi} stat='title' textSur={['', '']} height={window.innerHeight / 10} transition={transition} />
+        <SectionedText utils={utils} cpi={cpi} stat='github' textSur={['', '']} height={window.innerHeight * 0.0442} transition={transition} />
 
-        <SectionedText utils={utils} cpi={cpi} stat='stars' textSur={['stars: ', '']} height={28} transition={transition} />
-        <SectionedText utils={utils} cpi={cpi} stat='forks' textSur={['forks: ', '']} height={28} transition={transition} />
-        <SectionedText utils={utils} cpi={cpi} stat='watching' textSur={['watching: ', '']} height={28} transition={transition} />
+        <SectionedText utils={utils} cpi={cpi} stat='stars' textSur={['stars: ', '']} height={window.innerHeight * 0.031} transition={transition} />
+        <SectionedText utils={utils} cpi={cpi} stat='forks' textSur={['forks: ', '']} height={window.innerHeight * 0.031} transition={transition} />
+        <SectionedText utils={utils} cpi={cpi} stat='watching' textSur={['watching: ', '']} height={window.innerHeight * 0.031} transition={transition} />
       </div>
     </div>
   )

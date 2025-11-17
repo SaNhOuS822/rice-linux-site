@@ -140,7 +140,6 @@ function round(num, decimalPlaces) {
 }
 
 
-// NOTE: Сделать ease сперва резким и потом плавно затухающим, но с более явным затуханием и более плавным, сделать больше отступ у имаджей, можно высоту уменьшить, увеличить отступ снизу и уменьшить ширину
 function UtilImage({ index, util, cpi }) {
   const [scope, animate] = useAnimate();
   const [animDelay, setAnimDelay] = useState(HIDING_DELAY + HIDING_DURATION);
@@ -237,13 +236,15 @@ export default function UtilsPage() {
         delay: delay,
       }} />
       <div className="utils__count__wrapper">
-        <UtilsCount cpi={cpi} delay={delay} extraClass={'utils__count__current'} />
+        <UtilsCount cpi={cpi} delay={delay} style={{
+          transform: `translateX(30%) translateY(2%) scale(${window.innerHeight / 1808})`
+        }} />
         <motion.p className="utils__count-separator"
           initial={{
             fontSize: '1px',
           }}
           animate={{
-            fontSize: '90px',
+            fontSize: `${window.innerHeight / 10}px`,
           }}
           transition={{
             delay: HIDING_DELAY + HIDING_DURATION,
@@ -251,7 +252,9 @@ export default function UtilsPage() {
             ease: transitionEase,
           }}
         >/</motion.p>
-        <UtilsCount cpi={countLength} delay={delay} extraClass={'utils__count__total'} />
+        <UtilsCount cpi={countLength} delay={delay} style={{
+          transform: `translateX(-30%) translateY(2%) scale(${window.innerHeight / 1808})`
+        }} />
       </div>
       {utils.map((util, index) => {
         return (

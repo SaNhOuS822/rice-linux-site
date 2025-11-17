@@ -9,7 +9,7 @@
 
     position: relative;
 
-    width: 350px;
+    width: calc(100vw * 0.194);
 
     display: flex;
     flex-direction: column;
@@ -29,7 +29,7 @@
 
       color: white;
       font-weight: 700;
-      font-size: 80px;
+      font-size: calc(100vh * 0.0885);
       line-height: 1;
     }
 
@@ -38,7 +38,7 @@
         position: relative;
         overflow: hidden;
 
-        margin-bottom: 20px;
+        margin-bottom: calc(100vh * 0.0222);
       }
 
       position: absolute;
@@ -47,7 +47,7 @@
 
       color: white;
       font-weight: 700;
-      font-size: 35px;
+      font-size: calc(100vh * 0.0387);
       line-height: 1;
     }
 
@@ -65,7 +65,7 @@
 
       color: white;
       font-weight: 700;
-      font-size: 25px;
+      font-size: calc(100vh * 0.0277);
       line-height: 1;
     }
 
@@ -83,7 +83,7 @@
 
       color: white;
       font-weight: 700;
-      font-size: 25px;
+      font-size: calc(100vh * 0.0277);
       line-height: 1;
     }
 
@@ -101,7 +101,7 @@
 
       color: white;
       font-weight: 700;
-      font-size: 25px;
+      font-size: calc(100vh * 0.0277);
       line-height: 1;
     }
   }
@@ -114,7 +114,7 @@
       top: 13vh;
       right: 9vw;
 
-      width: 450px;
+      width: 25vw;
     }
 
     display: flex;
@@ -126,7 +126,7 @@
         position: relative;
         overflow: hidden;
 
-        height: 73px;
+        height: calc(100vh * 0.0808);
 
         margin-bottom: 15px;
       }
@@ -135,7 +135,7 @@
 
       color: white;
       font-weight: 700;
-      font-size: 70px; // 35px
+      font-size: calc(100vh * 0.0774); // 35px
       line-height: 1;
     }
 
@@ -144,14 +144,14 @@
         position: relative;
         overflow: hidden;
 
-        height: 40px;
+        height: calc(100vh * 0.04424);
       }
 
       position: absolute;
 
       color: white;
       font-weight: 700;
-      font-size: 35px;
+      font-size: calc(100vh * 0.0387);
       line-height: 1;
     }
   }
