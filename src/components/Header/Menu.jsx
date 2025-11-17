@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import '../../styles/Header/Menu.scss';
 
 
-function PageLink({className, to, setPressedRoute, children}) {
+function PageLink({ className, to, setPressedRoute, children }) {
   return (
-    <motion.div className="relative"
+    <motion.div className="relative header__menu-link"
       initial='initial'
       whileHover='hovered'
     >
@@ -25,6 +25,7 @@ function PageLink({className, to, setPressedRoute, children}) {
                 }}
                 transition={{
                   delay: 0.02 * index,
+                  duration: 0.3,
                   ease: 'easeInOut',
                 }}
               >{char}</motion.span>
@@ -45,6 +46,7 @@ function PageLink({className, to, setPressedRoute, children}) {
                 }}
                 transition={{
                   delay: 0.02 * index,
+                  duration: 0.3,
                   ease: 'easeInOut',
                 }}
               >{char}</motion.span>

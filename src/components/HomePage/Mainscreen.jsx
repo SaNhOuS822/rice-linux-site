@@ -21,7 +21,7 @@ export default function MainScreen() {
     if (loaded == false) {
       setTimeout(() => {
         setLoaded(true);
-      }, 3 * 1000);
+      }, 1 * 1000);
     }
     if (loaded == true) {
       setTimeout(() => {

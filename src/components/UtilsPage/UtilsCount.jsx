@@ -63,12 +63,12 @@ export default function UtilsCount({ cpi, delay, style }) {
       <defs>
         <filter id='filter'>
           <feGaussianBlur in='SourceAlpha' stdDeviation='10' result='blur' /> 
-          <feColorMatrix in='blur' mode='matrix' values='
+          <feColorMatrix in='blur' mode='matrix' values={`
             1 0 0 1 1
             0 1 0 1 1
             0 0 1 1 1
             0 0 0 25 -10
-            ' result='filter' />
+            `} result='filter' />
         </filter>
       </defs>
       {numbers.map((d, i) => {

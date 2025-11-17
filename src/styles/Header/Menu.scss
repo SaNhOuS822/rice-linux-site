@@ -1,6 +1,6 @@
 $lgradient: linear-gradient(to right, #1F9BF3, #C259E7, #C259E7, #1F9BF3, #1F9BF3, #C259E7);
 
-$lg_size: 500% 100%;
+$lg_size: 500% 500%;
 $lg_anim_duration: 3s;
 
 
@@ -34,6 +34,7 @@ $lg_anim_duration: 3s;
         animation: gradientAnimation $lg_anim_duration linear infinite;
 
         background-clip: text;
+        -webkit-background-clip: text;
 
         color: transparent;
       }

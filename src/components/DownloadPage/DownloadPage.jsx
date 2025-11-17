@@ -28,7 +28,7 @@ export default function DownloadPage() {
 
   return (
     <div className="downloadPage__wrapper">
-      <motion.div ref={scope} className="downloadPage [background-image:linear-gradient(to_bottom,#222436,#C259E7)]">
+      <motion.div ref={scope} className="downloadPage">
         <FirstSection csi={csi} />
         <SecondSection />
         <ThirdSection />
